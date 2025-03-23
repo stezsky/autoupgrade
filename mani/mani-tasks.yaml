@@ -1,0 +1,22 @@
+tasks:
+  maven-parent-artifact:
+    cmd: |
+      cat pom.xml | xq -x '/project/parent/artifactId'
+    spec:
+      output: table
+  maven-parent-version:
+    cmd: |
+      cat pom.xml | xq -x '/project/parent/version'
+    spec:
+      output: table
+  upgrade-service:
+    cmd: |
+      mvn org.openrewrite.maven:rewrite-maven-plugin:6.3.1:run \
+      -Drewrite.recipeArtifactCoordinates=cz.stezsky.autoupgrade:autoupgrade:0.0.1-SNAPSHOT \
+      -Drewrite.activeRecipes=cz.stezsky.autoupgrade.recipes.ServiceUpgrade # Recipe to run
+    spec:
+      parallel: true
+
+
+
+

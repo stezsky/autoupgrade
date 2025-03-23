@@ -20,3 +20,34 @@ See detail on [Open rewrite page](https://docs.openrewrite.org/)
       -Drewrite.recipeArtifactCoordinates=cz.stezsky.autoupgrade:autoupgrade:0.0.1-SNAPSHOT \
       -Drewrite.activeRecipes=cz.stezsky.autoupgrade.recipes.ServiceUpgrade # Recipe to run
     ````
+
+## Mani CLI
+
+Mani is a CLI tool that helps you manage multiple repositories. It's useful when you are working with microservices, multi-project systems, multiple libraries, or just a collection of repositories and want a central place for pulling all repositories and running commands across them.
+Mani has many features:
+* Declarative configuration
+* Clone multiple repositories with a single command
+* Run custom or ad-hoc commands across multiple repositories
+* Built-in TUI
+* Flexible filtering
+* Customizable theme
+* Auto-completion support
+* Portable, no dependencies
+
+See detail on [Mani cli](https://manicli.com/)
+
+## Examples
+### Run task on all project
+ ````shell
+   mani run maven-parent-artifact --all
+ ````
+### Run task task on project
+ ````shell
+   mani run maven-parent-artifact --tags project-gemini
+   mani run maven-parent-artifact --tags project-apollo
+ ````
+### Print parent info
+ ````shell
+   mani run maven-parent-artifact maven-parent-version --all --output table
+ ````
+

@@ -1,0 +1,3 @@
+import:
+  - ./mani-repos.yaml
+  - ./mani-tasks.yaml

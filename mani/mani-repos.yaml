@@ -1,0 +1,29 @@
+projects:
+  spring-petclinic:
+    url: https://github.com/stezsky/spring-petclinic.git
+    tags:
+      - java
+      - team-alfa
+      - service
+      - project-gemini
+  microservice-1:
+    url: https://github.com/stezsky/spring-petclinic.git
+    tags:
+      - java
+      - team-beta
+      - service
+      - project-gemini
+  microservice-2:
+    url: https://github.com/stezsky/spring-petclinic.git
+    tags:
+      - java
+      - team-beta
+      - service
+      - project-apollo
+  microservice-3:
+    url: https://github.com/stezsky/spring-petclinic.git
+    tags:
+      - java
+      - team-gamma
+      - library
+      - project-apollo
