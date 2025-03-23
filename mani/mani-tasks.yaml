@@ -9,6 +9,18 @@ tasks:
       cat pom.xml | xq -x '/project/parent/version'
     spec:
       output: table
+  mvnw-version:
+    cmd: |
+      ./mvnw -version | grep "Apache Maven"
+    spec:
+      output: table
+  upgrade-mvnw:
+    cmd: |
+      mvn org.openrewrite.maven:rewrite-maven-plugin:6.3.1:run \
+      -Drewrite.recipeArtifactCoordinates=cz.stezsky.autoupgrade:autoupgrade:0.0.1-SNAPSHOT \
+      -Drewrite.activeRecipes=org.openrewrite.maven.UpdateMavenWrapper # Recipe to run
+    spec:
+      parallel: true
   upgrade-service:
     cmd: |
       mvn org.openrewrite.maven:rewrite-maven-plugin:6.3.1:run \

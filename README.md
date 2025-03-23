@@ -37,17 +37,39 @@ Mani has many features:
 See detail on [Mani cli](https://manicli.com/)
 
 ## Examples
+
+### Clone all services from git repo
+ ````shell
+   mani sync
+ ````
+
 ### Run task on all project
  ````shell
    mani run maven-parent-artifact --all
  ````
+
 ### Run task task on project
  ````shell
-   mani run maven-parent-artifact --tags project-gemini
+   mani run maven-parent-artifact --all
    mani run maven-parent-artifact --tags project-apollo
  ````
+
 ### Print parent info
  ````shell
    mani run maven-parent-artifact maven-parent-version --all --output table
  ````
 
+### Version of maven wrapper in projects
+ ````shell
+   mani run mvnw-version --all --output table
+ ````
+
+### Upgrade maven wrapper of Gemini project
+ ````shell
+   mani run upgrade-mvnw --tags project-gemini
+ ````
+
+### Upgrade services of Apollo project
+ ````shell
+   mani run maven-parent-artifact upgrade-service --tags project-apollo
+ ````

@@ -1,6 +1,6 @@
 type: specs.openrewrite.org/v1beta/recipe
 name: cz.stezsky.autoupgrade.recipes.ServiceUpgrade
-description: Convert Foo to Bar.
+description: Upgrade service to the last version of framework
 recipeList:
   - org.openrewrite.maven.UpdateMavenWrapper
   #  - org.openrewrite.java.spring.boot3.UpgradeSpringBoot_3_3
